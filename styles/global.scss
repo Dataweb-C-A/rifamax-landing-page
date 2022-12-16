@@ -5,21 +5,10 @@ body {
 }
 
 header {
-  background: #000 !important;
+  background: #000;
   color: #fff;
 }
 
 body::-webkit-scrollbar {
-  width: 5px!important;
-  border-radius: 15px 0 0 15px!important;
-}
-
-body::-webkit-scrollbar-track {
-  background-color: #ffffff!important;
-  border-radius: 15px 0 0 15px!important;
-}
-
-body::-webkit-scrollbar-thumb {
-  background-color: rgba(#000000, 0.27)!important;
-  border-radius: 15px!important;
+  display: none;
 }

@@ -1,4 +1,5 @@
-import { createStyles, Overlay, Container, Title, Button, Text } from '@mantine/core'
+import { createStyles, Overlay, Title, Button, Text } from '@mantine/core'
+import { Carousel } from '@mantine/carousel'
 import { scrollById } from './scrollById'
 
 const useStyles = createStyles((theme) => ({
@@ -63,10 +64,12 @@ const useStyles = createStyles((theme) => ({
   },
 
   control: {
-    marginTop: theme.spacing.xl * 1.5,
+    marginTop: `${theme.spacing.xl * 1.5}`,
 
     [theme.fn.smallerThan('sm')]: {
-      width: '100%'
+      width: '80%',
+      margin: `${theme.spacing.xl * 1.5} 0 0 0`,
+      marginLeft: '10% !important'
     }
   }
 }))
@@ -81,21 +84,23 @@ export function Hero () {
         opacity={1}
         zIndex={0}
       />
-      <video autoPlay loop muted className={classes.video}>
-        <source src='https://cdn.discordapp.com/attachments/982500239846027355/1049074801165209700/Video_sin_titulo_Hecho_con_Clipchamp_1.mp4' type='video/mp4' />
-      </video>
-      <Container className={classes.container}>
-        <Title className={classes.title}>El mejor lugar para ganar</Title>
-        <Text className={classes.description} size='xl' mt='xl' ta="center">
-          El mejor lugar para ganar dinero, con los mejores juegos y los mejores premios al mejor precio.
-        </Text>
+      <Carousel slideSize="100%" height={700} withIndicators withControls={false}>
+        <Carousel.Slide>
+          <video autoPlay loop muted className={classes.video}>
+            <source src='https://cdn.discordapp.com/attachments/982500239846027355/1049074801165209700/Video_sin_titulo_Hecho_con_Clipchamp_1.mp4' type='video/mp4' />
+          </video>
+          <Title style={{ margin: '330px auto 0 auto' }} className={classes.title} ta="center">El mejor lugar para ganar</Title>
+          <Text style={{ margin: '10px auto 0 auto' }} className={classes.description} size='xl' mt='xl' ta="center">
+            El mejor lugar para ganar dinero, con los mejores juegos y los mejores premios al mejor precio.
+          </Text>
 
-        <Button variant='white' color='dark' size='lg' mt="xl" onClick={
-          () => scrollById('premios')
-        }>
-          Saber mas
-        </Button>
-      </Container>
+          <Button variant='white' color='dark' size='md' style={{ marginLeft: '46.29%' }} className={classes.control} mt="xl" onClick={
+            () => scrollById('premios')
+          }>
+            Saber mas
+          </Button>
+        </Carousel.Slide>
+      </Carousel>
     </section>
   )
 }

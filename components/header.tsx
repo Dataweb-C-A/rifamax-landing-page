@@ -3,6 +3,7 @@ import { createStyles, Header, Group, ActionIcon, Container, Burger, Image } fro
 import { useDisclosure } from '@mantine/hooks'
 import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons'
 import { scrollById } from './scrollById'
+import Link from 'next/link'
 
 const useStyles = createStyles((theme) => ({
   inner: {
@@ -10,7 +11,7 @@ const useStyles = createStyles((theme) => ({
     justifyContent: 'space-between',
     alignItems: 'center',
     height: 56,
-    backgroundColor: 'black',
+    backgroundColor: 'white',
     maxWidth: '100%',
 
     [theme.fn.smallerThan('sm')]: {
@@ -100,14 +101,14 @@ export function HeaderMiddle () {
         <Group className={classes.links} spacing={5}>
           {items}
         </Group>
-
-        <Image
-          src="https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/ab/12/4a/ab124af9-d10e-e5e7-f574-0c219fff4def/source/512x512bb.jpg"
-          alt="Betseven"
-          width={40}
-          height={40}
-          radius="xl"
-        />
+        <Link href="/">
+          <Image
+            src="https://rifa-max.com/logo-rifamax.png"
+            alt="Rifamax"
+            width={90}
+            height={50}
+          />
+        </Link>
 
         <Group spacing={0} className={classes.social} position="right" noWrap>
           <ActionIcon size="lg">
