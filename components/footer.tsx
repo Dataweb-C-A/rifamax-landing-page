@@ -1,11 +1,13 @@
 import { createStyles, Text, Container, ActionIcon, Group, Image } from '@mantine/core'
 import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons'
+import moment from 'moment'
 
 const useStyles = createStyles((theme) => ({
   footer: {
     paddingTop: theme.spacing.xl * 2,
     paddingBottom: theme.spacing.xl * 2,
-    backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
+    // backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
+    backgroundColor: '#fff',
     borderTop: `1px solid ${
       theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[2]
     }`
@@ -173,7 +175,7 @@ export default function Footer () {
       </Container>
       <Container className={classes.afterFooter}>
         <Text color="dimmed" size="sm">
-          © 2022 Dataweb C.A. Todos los derechos reservados.
+          © {moment().format('YYYY')} Dataweb C.A. Todos los derechos reservados.
         </Text>
 
         <Group spacing={0} className={classes.social} position="right" noWrap>

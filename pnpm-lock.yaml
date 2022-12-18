@@ -30,9 +30,11 @@ specifiers:
   '@types/react': 18.0.26
   '@types/react-dom': 18.0.9
   dayjs: ^1.11.6
+  embla-carousel: ^7.0.5
   embla-carousel-react: ^7.0.5
   eslint: 8.29.0
   eslint-config-next: 13.0.6
+  moment: ^2.29.4
   next: 13.0.6
   next-auth: ^4.18.0
   node-sass: ^8.0.0
@@ -73,9 +75,11 @@ dependencies:
   '@types/react': 18.0.26
   '@types/react-dom': 18.0.9
   dayjs: 1.11.6
+  embla-carousel: 7.0.5
   embla-carousel-react: 7.0.5_react@18.2.0
   eslint: 8.29.0
   eslint-config-next: 13.0.6_s5ps7njkmjlaqajutnox5ntcla
+  moment: 2.29.4
   next: 13.0.6_wtkshzln4ytefoci33gdvvbety
   next-auth: 4.18.0_6jx7hpii6hgsrmhxgqrmo3277u
   react: 18.2.0
@@ -4295,6 +4299,10 @@ packages:
     resolution: {integrity: sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==}
     engines: {node: '>=10'}
     hasBin: true
+
+  /moment/2.29.4:
+    resolution: {integrity: sha512-5LC9SOxjSc2HF6vO2CyuTDNivEdoz2IvyJJGj6X8DJ0eFyfszE0QiEd+iXmBvUP3WHxSjFH/vIsA0EN00cgr8w==}
+    dev: false
 
   /mri/1.2.0:
     resolution: {integrity: sha512-tzzskb3bG8LvYGFF/mDTpq3jpI6Q9wc3LEmBaghu+DdCssd1FakN7Bc0hVNmEyGq1bq3RgfkCb3cmQLpNPOroA==}
