@@ -3,7 +3,7 @@ const apiBaseUrl: any = process.env.NODE_ENV === 'production'
   : 'http://localhost:3000'
 
 export const findUser = (token: string) => {
-  fetch(`${apiBaseUrl}/api/user`, {
+  fetch(`${apiBaseUrl}/api/v2/user`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
