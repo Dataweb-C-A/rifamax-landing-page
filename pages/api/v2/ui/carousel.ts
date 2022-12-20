@@ -35,7 +35,7 @@ export default function handler (
         url: 'https://www.google.com',
         hasButton: true,
         button: {
-          text: 'Saber mas',
+          text: 'Saber más',
           url: 'https://www.google.com',
           reference: 'premios'
         }

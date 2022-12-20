@@ -35,7 +35,7 @@ const CardsCarousel: React.FC<Items> = ({ content }: Items) => {
       slideSize='25%'
       slideGap='md'
       align='start'
-      mx={10}
+      mx={35}
       breakpoints={[
         { maxWidth: 'md', slideSize: '50%' },
         { maxWidth: 'sm', slideSize: '100%', slideGap: 0 }
@@ -57,7 +57,7 @@ const CardsCarousel: React.FC<Items> = ({ content }: Items) => {
         content.map((slide, index) => {
           return (
             <Carousel.Slide key={index}>
-              <Card shadow='sm' p='lg' radius='md' withBorder>
+              <Card shadow='sm' p='lg' radius='sm' withBorder>
                 <Card.Section>
                   <Image
                     src={slide.image}
@@ -79,7 +79,7 @@ const CardsCarousel: React.FC<Items> = ({ content }: Items) => {
                 </Text>
 
                 <Button variant='light' color='blue' fullWidth mt='md' radius='md'>
-                  Ver mas
+                  Ver más
                 </Button>
               </Card>
             </Carousel.Slide>
