@@ -1,7 +1,7 @@
 // import { SimpleGrid } from '@mantine/core'
 // import { ArticleCard withBorders } from '../components/articleCard withBorders'
 import React, { useState, useEffect } from 'react'
-import { Text, Grid, Image } from '@mantine/core'
+import { Text, Grid, Image, Card } from '@mantine/core'
 import { HeaderMiddle } from '../components/header'
 import Hero from '../components/hero'
 import Footer from '../components/footer'
@@ -56,42 +56,44 @@ export default function Home () {
           }}>
           Conócenos
         </Text>
-        <Grid>
-          <Grid.Col sm={12} md={6}>
-            <Image
-              src='https://i.imgur.com/hpq6qcv.jpg'
-              alt='Rifa con nosotros'
-              width={'100%'}
-              height={'100%'}
-              radius={'sm'}
-              px={40}
-              style={{
-                userSelect: 'none'
-              }}
-            />
-          </Grid.Col>
-          <Grid.Col sm={12} md={6}>
-            <Text
-              ta='center'
-              style={{
-                marginTop: '-7px',
-                marginBottom: '10px',
-                fontSize: '1.5rem',
-                fontFamily: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji',
-                fontWeight: 600
-              }}>
-              Rifa con nosotros
-            </Text>
-            <div>
-              <Text mx={50} ta='justify'>
-                Rifamax es una aplicación web y móvil que te permite realizar rifas de forma segura y automática. Con Rifamax, siempre ganas tú. 
-              </Text><br/>
-              <Text mx={50} ta='justify'>
-                Con Rifamax no tienes que preocuparte por la realizacion de las rifas. Todo se realiza fácil y rápido a través de nuestra plataforma.
+        <Card mx="39px" withBorder>
+          <Grid>
+            <Grid.Col sm={12} md={6}>
+              <Image
+                src='https://i.imgur.com/hpq6qcv.jpg'
+                alt='Rifa con nosotros'
+                width={'100%'}
+                height={'100%'}
+                radius={'sm'}
+                px={40}
+                style={{
+                  userSelect: 'none'
+                }}
+              />
+            </Grid.Col>
+            <Grid.Col sm={12} md={6}>
+              <Text
+                ta='center'
+                style={{
+                  marginTop: '-7px',
+                  marginBottom: '10px',
+                  fontSize: '1.5rem',
+                  fontFamily: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji',
+                  fontWeight: 600
+                }}>
+                Rifa con nosotros
               </Text>
-            </div>
-          </Grid.Col>
-        </Grid>
+              <div>
+                <Text mx={50} ta='justify'>
+                  Rifamax es una aplicación web y móvil que te permite realizar rifas de forma segura y automática. Con Rifamax, siempre ganas tú.
+                </Text><br/>
+                <Text mx={50} ta='justify'>
+                  Con Rifamax no tienes que preocuparte por la realizacion de las rifas. Todo se realiza fácil y rápido a través de nuestra plataforma.
+                </Text>
+              </div>
+            </Grid.Col>
+          </Grid>
+        </Card>
       </section>
       <Footer />
     </div>
